@@ -1,0 +1,51 @@
+SSLCommerz
+https://github.com/sslcommerz/SSLCommerz-Laravel/tree/master
+============================================================
+1. Limitation
+i) Trade Lience
+ii) 
+
+Sandbox Account Create
+
+1) Create New Laravel Project
+Command: composer create-project laravel/larvel sslc.com
+Then, cd sslc.com
+Then, Command: php artisan serve
+
+
+2) https://github.com/sslcommerz/SSLCommerz-Laravel/tree/master
+Instructions:
+Step 1: Download and extract the library files.
+
+Step 2: Copy the Library folder and put it in the laravel project's app/ directory. If needed, then run composer dump -o.
+
+Step 3: Copy the config/sslcommerz.php file into your project's config/ folder.
+
+Step 4: Copy and put 3 key-value pairs from env_example to your .env file.
+
+For development purposes, you can obtain sandbox 'Store ID' and 'Store Password' by registering at https://developer.sslcommerz.com/registration/
+
+Step 5: Add exceptions for VerifyCsrfToken middleware accordingly (this is for our example code, use your actual routes).
+protected $except = [
+    '/success',
+    '/cancel',
+    '/fail',
+    '/ipn',
+    '/pay-via-ajax', // only required to run example codes. Please see bellow.
+];
+Optional: We have also provided some example codes which can help you understand the process. Developer's discretion is needed. Following steps are not mandatory.
+Copy SslCommerzPaymentController into your project's Controllers folder.
+
+Copy defined routes from routes/web.php into your project's route file.
+
+Copy views from resources/views/*.blade.php.
+
+
+
+
+
+3. Aamar Pay
+https://github.com/aamarpay-dev/aamarPay-laravel/tree/main
+
+
+
